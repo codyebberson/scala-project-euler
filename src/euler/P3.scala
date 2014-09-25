@@ -4,6 +4,9 @@ package euler
 object P3 extends App {
 
   def isPrime(n: Long): Boolean = {
+    if (n <= 1) {
+      return false
+    }
     for (x <- 2L to Math.sqrt(n).toLong) {
       if (n % x == 0) {
         return false
